@@ -1,0 +1,20 @@
+<mat-form-field appearance="outline" class="search-field">
+  <mat-label>Поиск книг</mat-label>
+  <input
+    matInput
+    placeholder="Название или автор..."
+    [(ngModel)]="searchText"
+  >
+</mat-form-field>
+
+<button mat-fab color="primary" class="add-button" (click)="openAddBookDialog()">
+  <mat-icon>add</mat-icon>
+</button>
+
+<div class="card-box">
+  @for (book of filteredBooks; track book) {
+    <app-book-card [book]="book"/>
+  } @empty {
+    <p>ничего не найдено</p>
+  }
+</div>
