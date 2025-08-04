@@ -1,0 +1,21 @@
+<mat-card class="book-card">
+    @if(book) {
+        <mat-card-header>
+            <mat-card-title class="title">{{ book.title }}</mat-card-title>
+            <mat-card-subtitle class="author">{{ book.author }}</mat-card-subtitle>
+        </mat-card-header>
+
+        <mat-divider></mat-divider>
+
+        <mat-card-content class="content">
+            <p class="description">{{ book.description }}</p>
+        </mat-card-content>
+
+        <mat-card-actions align="end">
+            <button mat-raised-button color="primary" (click)="goBack()">
+                <mat-icon>arrow_back</mat-icon>
+                Назад к списку
+            </button>
+        </mat-card-actions>
+    }
+</mat-card>

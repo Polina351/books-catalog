@@ -1,0 +1,25 @@
+.book-card {
+  width: 250px;
+  height: 200px;
+  margin: 16px;
+  transition: transform 0.3s;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+
+  mat-card-header {
+    padding: 16px 16px 0;
+  }
+
+  mat-card-title {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 4px;
+  }
+
+  mat-card-subtitle {
+    color: #666;
+  }
+}
